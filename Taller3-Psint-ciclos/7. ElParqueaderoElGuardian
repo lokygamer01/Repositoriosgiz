@@ -1,0 +1,245 @@
+//El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que 
+//se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y 
+//número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. 
+//Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.
+
+Proceso ElParqueaderoElGuardian
+		//definimos las variables necesarias para el ejercicio,
+		definir i Como Entero;
+		definir placa,marca,nombre, telefono , nit Como Caracter;
+		definir placa1,placa2,placa3,placa4,placa5,telefono1,telefono2,telefono3,telefono4,telefono5,organizacion1,organizacion2,organizacion3 Como Caracter;
+		definir marca1,marca2,marca3,marca4,marca5,nombre1,nombre2,nombre3,nombre4,nombre5,nit1,nit2,nit3,nit4,nit5 Como Caracter
+		definir contador,contador2,contador3,telDif Como Entero;
+		definir enter Como Caracter;
+		contador <- 0;
+		i <- 0;
+		//denino estas variables para que no de eeror al consultar dichas en el punto 2
+		nombre1<-'Ninguno';marca1<-'Ninguno';nit1<-'Ninguno';
+		telefono1 <-'Ninguno';placa1 <-'Ninguno';
+		
+		nombre2<-'Ninguno';marca2<-'Ninguno';nit2<-'Ninguno';
+		telefono2 <-'Ninguno';placa2 <-'Ninguno';
+		
+		nombre3<-'Ninguno';marca3<-'Ninguno';nit3<-'Ninguno';
+		telefono3<-'Ninguno';placa3 <-'Ninguno';
+		
+		nombre4<-'Ninguno';marca4<-'Ninguno';nit4<-'Ninguno';
+		telefono4<-'Ninguno';placa4<-'Ninguno';
+		
+		nombre5<-'Ninguno';marca5<-'Ninguno';nit5<-'Ninguno';
+		telefono5<-'Ninguno';placa5<-'Ninguno';
+		//ahora hacemos el ciclo para pedir estos datos
+		mientras i <= 3 Hacer
+			Escribir "## Parqueadreo El Guardian ##";
+			Escribir "1. Ingresar al parqueadero ";
+			Escribir "2. Revisar Autos del parqueadore ";
+			Escribir "3. Salir del parqueadero ";
+			Escribir "4. Salir del Sistema";
+			leer i;
+			
+			// crear contacto
+			si i=1 Entonces
+				Escribir "## Registrar Auto ##";
+				Escribir "Nombre: "; Leer nombre;
+				// este Repetir es pa vailidar que el telefono no se repita
+				Repetir
+					Escribir "Telefono: "; leer telefono;
+					si telefono=telefono1 o telefono=telefono2 o telefono = telefono3 Entonces
+						Escribir "El Telefono Ya Esta En Uso";
+					SiNo
+						telDif<-1;
+					FinSi
+				Hasta Que telDif=1
+				Escribir "nit: "; leer nit;
+				Escribir "Placa: "; leer nit;
+				Escribir "marca: "; leer nit;
+				contador <- contador+1;
+				telDif<-0;
+			FinSi
+			//guardar contacto
+			si contador = 1 Entonces
+				nombre1<-nombre;
+				telefono1<-telefono;
+				nit1<-nit;
+				marca1<-marca;
+				placa1<-placa;
+				contador <- 2;
+				Escribir "## Contacto Guardado con exito ##";
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			si contador = 3 Entonces
+				nombre2<-nombre;
+				telefono2<-telefono;
+				nit2<-nit;
+				marca2<-marca;
+				placa2<-placa;
+				contador <-4;
+				Escribir "## Contacto Guardado con exito ##";
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			si contador = 5 Entonces
+				nombre3<-nombre;
+				telefono3<-telefono;
+				nit3<-nit;
+				marca3<-marca;
+				placa3<-placa;
+				contador <- 6;
+				Escribir "## Contacto Guardado con exito ##";
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			si contador = 7 Entonces
+				nombre4<-nombre;
+				telefono4<-telefono;
+				nit4<-nit;
+				marca4<-marca;
+				placa4<-placa;
+				contador <- 8;
+				Escribir "## Contacto Guardado con exito ##";
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			si contador = 9 Entonces
+				nombre5<-nombre;
+				telefono5<-telefono;
+				nit5<-nit;
+				marca5<-marca;
+				placa5<-placa;
+				contador <- 0;
+				Escribir "## Contacto Guardado con exito ##";
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			//buscar auto
+			si i=2 Entonces
+				Escribir "Que Auto decea Revisar: ";
+				Escribir "Auto 1: ";
+				Escribir "Auto 2: ";
+				Escribir "Auto 3: ";
+				Escribir "Auto 4: ";
+				Escribir "Auto 5: ";
+				leer contador2;
+				si contador2=1 Entonces
+					Escribir "## contacto n° ",contador2," ##";
+					Escribir "Nombre: ",nombre1;
+					Escribir "Telefono: ",telefono1;
+					Escribir "nit: ",nit1;
+					Escribir "marca: ",marca1;
+					Escribir "placa: ",placa1;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+				si contador2=2 Entonces
+					Escribir "## contacto n° ",contador2," ##";
+					Escribir "Nombre: ",nombre2;
+					Escribir "Telefono: ",telefono2;
+					Escribir "nit: ",nit2;
+					Escribir "marca: ",marca2;
+					Escribir "placa: ",placa2;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+				si contador2=3 Entonces
+					Escribir "## contacto n° ",contador2," ##";
+					Escribir "Nombre: ",nombre3;
+					Escribir "Telefono: ",telefono3;
+					Escribir "nit: ",nit3;
+					Escribir "marca: ",marca3;
+					Escribir "placa: ",placa3;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+				si contador2=4 Entonces
+					Escribir "## contacto n° ",contador2," ##";
+					Escribir "Nombre: ",nombre4;
+					Escribir "Telefono: ",telefono4;
+					Escribir "nit: ",nit4;
+					Escribir "marca: ",marca4;
+					Escribir "placa: ",placa4;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+					si contador2=5 Entonces
+						Escribir "## contacto n° ",contador2," ##";
+						Escribir "Nombre: ",nombre5;
+						Escribir "Telefono: ",telefono5;
+						Escribir "nit: ",nit5;
+						Escribir "marca: ",marca5;
+						Escribir "placa: ",placa5;
+						leer enter;
+						Limpiar Pantalla;
+						FinSi
+			FinSi
+			//Retirar carro del parqueadero
+			si i=3 Entonces
+				Escribir "Que Auto decea Retirar: ";
+				Escribir "Auto 1: ";
+				Escribir "Auto 2: ";
+				Escribir "Auto 3: ";
+				Escribir "Auto 4: ";
+				Escribir "Auto 5: ";
+				leer contador3;
+				si contador3=1 Entonces
+					Escribir "¡ Auto Retirado del paqueadero !";
+					nombre1<-"Ninguno";
+					telefono1<-"Ninguno";
+					nit1<-"Ninguno";
+					marca1<-"Ninguno";
+					placa1<-"Ninguno";
+					contador<-0;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+				si contador3=2 Entonces
+					Escribir "¡ Contacto Eliminado !";
+					nombre2<-"Ninguno";
+					telefono2<-"Ninguno";
+					nit2<-"Ninguno";
+					marca2<-"Ninguno";
+					placa2<-"Ninguno";
+					contador<-2;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+				si contador3=3 Entonces
+					Escribir "¡ Contacto Eliminado !";
+					nombre3<-"Ninguno";
+					telefono3<-"Ninguno";
+					nit3<-"Ninguno";
+					marca3<-"Ninguno";
+					placa3<-"Ninguno";
+					contador<-4;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+				si contador3=4 Entonces
+					Escribir "¡ Contacto Eliminado !";
+					nombre4<-"Ninguno";
+					telefono4<-"Ninguno";
+					nit4<-"Ninguno";
+					marca4<-"Ninguno";
+					placa4<-"Ninguno";
+					contador<-6;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+				si contador3=5 Entonces
+					Escribir "¡ Contacto Eliminado !";
+					nombre5<-"Ninguno";
+					telefono5<-"Ninguno";
+					nit5<-"Ninguno";
+					marca5<-"Ninguno";
+					placa5<-"Ninguno";
+					contador<-8;
+					leer enter;
+					Limpiar Pantalla;
+				FinSi
+			FinSi
+			
+			
+		FinMientras
+		
+FinProceso
+

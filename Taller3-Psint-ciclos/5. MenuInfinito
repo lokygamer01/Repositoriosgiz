@@ -1,0 +1,29 @@
+//Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.
+Proceso MenuInfinito
+	//creamos las variables
+	definir i Como Entero;
+	definir nombre Como Caracter;
+     i <- 0;
+	//ahora hacemos el ciclo para pedir los datos, vamos con un while por que es el que mas me gusta
+
+	Mientras i <= 2 Hacer
+		Escribir "## Menú de Usuario ##";
+		Escribir "1. Ingresar nombre: ";
+		Escribir "2. Saludar persona: ";
+		Escribir "3. Salir del Sistema: ";
+		leer i;
+		si i=1 Entonces
+			escribir "Ingrese su nombre compadre: ";
+			leer nombre;
+			Escribir "";
+			Escribir "nombre ingresado: ",nombre;
+		FinSi
+		si i=2 Entonces
+			Escribir "Buenos dias Amigo :)";
+		FinSi
+		Escribir "entrer para continuar";
+		leer nombre;
+		Limpiar Pantalla;
+	FinMientras
+	
+FinProceso
