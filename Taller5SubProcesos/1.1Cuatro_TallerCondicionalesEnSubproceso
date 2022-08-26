@@ -1,0 +1,73 @@
+subProceso LA_VIDEO_TIENDA <- tienda (nombre)
+	Definir nit Como Entero;
+	definir pelicula Como Caracter;
+	definir precio Como Real;
+	definir tiempo Como entero;
+	Definir total como real;
+	definir obsevacion Como Caracter;
+	definir opcion como entero;
+	definir opcion2 como entero;
+	
+	
+	Escribir "";
+	Escribir "Ingrese el documento de identidad: ";
+	leer nit;
+	escribir "Las peliculas disponibles son: ";
+	escribir "";
+	escribir "1. Titanic (romanse,drama) $ 5.99";
+	escribir "2. rapidos y furiosos 9 (acción,ficción) $ 10.30";
+	escribir "3. Midsommar (Terror) $ 6.15 ";
+	leer opcion;
+	segun opcion hacer
+		1:
+			pelicula <- "Titanic(romanse,drama)";
+			precio <- 5.99;
+		2:
+			pelicula <- "rapidos y furiosos 9(acción,ficción)";
+			precio <- 10.30;
+		3:
+			pelicula <- "Midsommar(Terror)";
+			precio <- 6.15;
+	FinSegun
+	
+	Escribir "";
+	escribir "cuanto tiempo quiere alquilar: ";
+	escribir "1. una semana";
+	escribir "2. un mes";
+	escribir "3. un año";
+	leer opcion2;
+	Escribir "";
+	
+	segun opcion2 hacer
+		1:
+			tiempo <- 7;
+		2:
+			tiempo <- 30;
+		3:
+			tiempo <- 365;
+	FinSegun
+	
+	total <- tiempo * precio; 
+	
+	Escribir "Ingrese obsevacion: ";
+	leer obsevacion;
+	Limpiar Pantalla;
+	Escribir "@@@ Pelicula alquilada con extio";
+	escribir "";
+	Escribir "Nombre: ",nombre;
+	Escribir "Nit: ",nit;
+	escribir "pelicula: ",pelicula;
+	escribir "precio: $",precio;
+	escribir "tiempo: ",tiempo," Dias";
+	Escribir "El total a pagar es: $",total;
+	escribir "";
+	escribir "obsevacion: ",obsevacion;
+FinsubProceso
+
+Proceso Cuatro_TallerCondicionalesEnSubproceso
+	Definir cliente Como Caracter;
+	Escribir "video peliculas el Porvenir";
+	Escribir "Ingrese el nombre del cliente: ";
+	leer cliente;
+	Escribir tienda(cliente);
+FinProceso

@@ -1,0 +1,45 @@
+//Puntos uno y dos usandao subprocesos en condicionales
+SubProceso edad <- mayor (num)
+	Escribir "puntos 1 y 2";
+	definir edad como entero;
+	edad <- num;
+	si  edad >= 18  Entonces
+		Escribir "Usted es mayor de edad";
+	sino 
+		Escribir "Usted es menor de edad";
+	FinSi
+FinSubProceso
+
+//subproceso punto numero 3
+SubProceso edad <- FiestaEdad (num)
+	Escribir "";
+	Escribir "Punto numero 3";
+	definir nombre Como Caracter;
+	definir apellido Como Caracter;
+	definir edad Como Entero;
+	Escribir "Por favor ingrese su nombre: ";
+	leer nombre;
+	escribir "por favor ingrese su apellido: ";
+	leer apellido;
+	Escribir "por favor ingrese su edad: ";
+	leer edad;
+	si edad >=18 Entonces
+		Escribir nombre," ",apellido," usted es mayor de edad, por lo tanto puede entrar a a la fiesta";
+	sino 
+		Escribir nombre," ",apellido," usted es menor de edad, por lo tanto NO puede entrar a a la fiesta";
+	FinSi
+FinSubProceso
+
+SubProceso edad <- IngresarEdad (num)
+	definir edad como entero;
+	Escribir "Ingrese edad para punto 1 y 2: ";
+	leer edad;
+FinSubProceso
+
+
+Proceso unoDosTres_TallerCondicionalesEnSubproceso
+	definir num,edad como entero;
+	num <- IngresarEdad("edad");
+	Escribir mayor(num);
+	Escribir FiestaEdad(num);
+FinProceso
