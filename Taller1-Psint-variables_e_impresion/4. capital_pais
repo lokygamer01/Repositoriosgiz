@@ -1,0 +1,18 @@
+Proceso capital_pais
+	//primero definimos variables
+	definir capital Como Caracter;
+	definir pais Como Caracter;
+	
+	//ahora pedimos la informacion
+	escribir 'ingrese el nombre de una ciudad capital de un pais: ';
+	leer capital;
+	escribir 'ingrese el nombre del pais al cual pertenece la capital anterior: ';
+	leer pais;
+	
+	//seguidamente limpiamos la pantalla y hacemos la concatenacion
+	Limpiar Pantalla;
+	escribir "la ciudad ",capital," es la capital del pais ",pais,;
+	
+	
+	
+FinProceso

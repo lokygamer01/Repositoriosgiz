@@ -1,0 +1,24 @@
+//Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe 
+//e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).
+Proceso La_mascota
+	//definimos el nombre de las varibles
+	definir nom_mascota Como Caracter;
+	definir edad como entero;
+	definir tipo como caracter;
+	definir nombre Como Caracter;
+	
+	//ahora pedimos los datos de entrada
+	escribir "ingrese el nombre de su mascota: ";
+	leer nom_mascota;
+	escribir "ingrese la edad de su mascota: ";
+	leer edad;
+	escribir "ingrese el tipo de su mascota: ";
+	leer tipo;
+	escribir "ingrese su nombre: ";
+	leer nombre;
+	
+	//seguidamente limpiamos la pantalla y concatenamos todo
+	Limpiar Pantalla;
+	escribir nom_mascota," es un(a) ",tipo,", el cual, tiene ",edad," años de edad y ",nombre," es actualmente su dueño(a)";
+	
+FinProceso

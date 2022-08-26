@@ -1,0 +1,18 @@
+Proceso nombre_apellido_edad_estatura
+	//definimos variables 
+	definir nombre Como Caracter;
+	definir apellido Como Caracter;
+	definir edad Como entero;
+	definir estatura Como real;
+	
+	//pedimos los datos
+	Escribir "por favor ingrese su nombre: ";
+	leer nombre;
+	escribir "por favor ingrese su apellido: ";
+	leer apellido;
+	Escribir "por favor ingrese su edad: ";
+	leer edad;
+	escribir "por favor ingrese su estatura: ";
+	leer estatura;
+	
+FinProceso
