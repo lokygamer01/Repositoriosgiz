@@ -1,0 +1,23 @@
+//Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, 
+//	entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, 
+//	deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.
+Proceso la_fiesta
+	//definimos las variables que utilizaremos
+	definir nombre Como Caracter;
+	definir apellido Como Caracter;
+	definir edad Como Entero;
+	//ahora pedimos los datos de entrada
+	Escribir "Por favor ingrese su nombre: ";
+	leer nombre;
+	escribir "por favor ingrese su apellido: ";
+	leer apellido;
+	Escribir "por favor ingrese su edad: ";
+	leer edad;
+	// seguidamente de esto hacemos la condicinal para determina si es apto para entrar
+	//a la fiesta o no
+	si edad >=18 Entonces
+		Escribir nombre," ",apellido," usted es mayor de edad, por lo tanto puede entrar a a la fiesta";
+	sino 
+		Escribir nombre," ",apellido," usted es menor de edad, por lo tanto NO puede entrar a a la fiesta";
+	FinSi
+FinProceso

@@ -1,0 +1,97 @@
+//La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, 
+//los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto,
+//consulta de precios por producto y devoluciones en caso de que se presenten.
+
+Proceso Drogueria_Mi_Salud
+	//iniciamos definiendo las variables
+	definir producto Como Caracter;
+	definir nombre Como Caracter;
+	definir nit Como Caracter;
+	definir precio,total Como Real;
+	definir opciproducto Como Entero;
+	definir cantidad como entero;
+	definir devolucion,continuar Como entero;
+	//luego pedimos los datos del clienta para hacer la respectiva compra
+	escribir "---Drogueria Mi Salud---";
+	Escribir "";
+	escribir "nombre del cliente: ";
+	leer nombre;
+	Escribir "Nit del cliente";
+	leer nit;
+	escribir "que producto decesa comprar: ";
+	
+	Escribir "1. Acetaminofen x10 $2.500 ";
+	escribir "2. Dolex x12 $4.000";
+	escribir "3. ibuprofeno x9 $5.000";
+	escribir "4. pañales winny x20 $30.000";
+	Escribir "5. Crema Colgate x1 $9.000";
+	escribir "6. tequila Gran malo $90.000";
+	leer opciproducto;
+	
+	segun opciproducto hacer 
+		1:
+			precio <- 2500;
+			producto <-"Acetaminofen x10" ;
+		2:
+			precio <- 4000;
+			producto<-"Dolex x12";
+		3:
+			precio <- 5000;
+			producto<-"ibuprofeno x9";
+		4:
+			precio <- 30000;
+			pruducto<-"pañales winny x20";
+		5:
+			precio <- 9000;
+			producto<-"Crema Colgate x1";
+		6:
+			precio <- 90000;
+			producto<-"tequila Gran malo";
+		escribir "";
+FinSegun
+
+escribir "";
+escribir "Cantidad: ";
+leer cantidad;
+total <- precio * cantidad;
+
+//ahora hacemos la esctructura de la factura, limpiando la pantalla
+Limpiar Pantalla;
+Escribir "**** Factura SETT-250 ";
+escribir "Cliente: ",nombre;
+escribir "Nit: ",nit;
+escribir "* ",producto, " $ ",precio," cantidad: ",cantidad;
+Escribir "Total: ",total;
+Escribir "";
+Escribir "precione enter tecla para continuar; ";
+leer continuar;
+Limpiar Pantalla;
+Escribir "Desea realizar debolucion? ";
+Escribir "1. Si";
+Escribir "2. No";
+escribir"";
+leer devolucion;
+segun devolucion hacer
+	1:
+		devolucion <- 1;
+	2:
+		devolucion <- 2;
+FinSegun
+
+si devolucion == 1 Entonces
+	Escribir"**** Devolucion de Compra ****";
+	escribir "Cliente: ",nombre;
+	escribir "Nit: ",nit;
+	escribir "* ",producto, " $ ",precio," cantidad: ",cantidad;
+	Escribir "devolucion: ",total;
+	Escribir "";
+SiNo
+	escribir "Gracias pro su compra :)";
+FinSi
+
+
+
+	
+	
+	
+FinProceso

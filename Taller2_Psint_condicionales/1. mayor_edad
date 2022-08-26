@@ -1,0 +1,13 @@
+//Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.
+Proceso Mayor_de_edad
+	//definimos la variable edad como entera
+	definir edad como entero;
+	//pedimos la edad del usuario
+	escribir "por favor ingrese su edad: ";
+	leer edad;
+	//ahora hacemos el condicion para que valide si es mayor o no
+	si  edad >= 18  Entonces
+	Escribir "Usted es mayor de edad";
+FinSi
+
+FinProceso

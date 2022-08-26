@@ -1,0 +1,6 @@
+El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.
+
+Nota
+Para entregar este taller, se debe grabar un vídeo de la pantalla con su voz explicando uno de los ejercicios, del punto 4 al 10, y mostrando su respectivo resultado. El video debe ser colgado en YouTube y compartir el enlace. También debe entregar en un archivo zip del código de sus programas realizados en la siguiente dirección https://forms.gle/fqPn6ffCY3xAtEa46
+
+https://youtu.be/JB9pz819mVw
