@@ -1,0 +1,143 @@
+//Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, 
+//teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el 
+//usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+Proceso APK
+	//definimos las variables necesarias para el ejercicio,
+	definir i Como Entero;
+	definir nombre,telefono,organizacion Como Caracter;
+	definir nombre1,nombre2,nombre3,telefono1,telefono2,telefono3,organizacion1,organizacion2,organizacion3 Como Caracter;
+	definir contador,contador2,contador3,telDif Como Entero;
+	definir enter Como Caracter;
+	contador <- 0;
+	i <- 0;
+	//denino estas variables para que no de eeror al consultar dichas en el punto 2
+	nombre<-'Ninguno';telefono<-'Ninguno';organizacion<-'Ninguno';
+	nombre1<-'Ninguno';telefono1<-'Ninguno';organizacion1<-'Ninguno';
+	nombre2<-'Ninguno';telefono2<-'Ninguno';organizacion2<-'Ninguno';
+	nombre3<-'Ninguno';telefono3<-'Ninguno';organizacion3<-'Ninguno';
+	//ahora hacemos el ciclo para pedir estos datos
+	mientras i <= 3 Hacer
+		Escribir "## Menú de Usuario ##";
+		Escribir "1. Ingresar Contacto ";
+		Escribir "2. Buscar Contacto ";
+		Escribir "3. Eliminar Contacto del Sistema ";
+		Escribir "4. Salir del Sistema";
+		leer i;
+		
+		// crear contacto
+		si i=1 Entonces
+			Escribir "## Crear Contacto ##";
+			Escribir "Nombre: "; Leer nombre;
+			// este Repetir es pa vailidar que el telefono no se repita
+		Repetir
+			Escribir "Telefono: "; leer telefono;
+			si telefono=telefono1 o telefono=telefono2 o telefono = telefono3 Entonces
+				Escribir "El Telefono Ya Esta En Uso";
+			SiNo
+				telDif<-1;
+			FinSi
+		Hasta Que telDif=1
+			Escribir "Organizacion: "; leer organizacion;
+			contador <- contador+1;
+			telDif<-0;
+		FinSi
+		//guardar contacto
+		si contador = 1 Entonces
+			nombre1<-nombre;
+			telefono1<-telefono;
+			organizacion1<-organizacion;
+			contador <- 2;
+			Escribir "## Contacto Guardado con exito ##";
+			leer enter;
+			Limpiar Pantalla;
+		FinSi
+		si contador = 3 Entonces
+			nombre2<-nombre;
+			telefono2<-telefono;
+			organizacion2<-organizacion;
+			contador <-4;
+			Escribir "## Contacto Guardado con exito ##";
+			leer enter;
+			Limpiar Pantalla;
+		FinSi
+		si contador = 5 Entonces
+			nombre3<-nombre;
+			telefono3<-telefono;
+			organizacion3<-organizacion;
+			contador <- 0;
+			Escribir "## Contacto Guardado con exito ##";
+			leer enter;
+			Limpiar Pantalla;
+		FinSi
+		//buscar contacto
+		si i=2 Entonces
+			Escribir "Que contacto decea ver: ";
+			Escribir "Contacto 1: ";
+			Escribir "Contacto 2: ";
+			Escribir "Contacto 3: ";
+			leer contador2;
+			si contador2=1 Entonces
+				Escribir "## contacto n° ",contador2," ##";
+				Escribir "Nombre: ",nombre1;
+				Escribir "Telefono: ",telefono1;
+				Escribir "Organizacion: ",telefono1;
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			si contador2=2 Entonces
+				Escribir "## contacto n° ",contador2," ##";
+				Escribir "Nombre: ",nombre2;
+				Escribir "Telefono: ",telefono2;
+				Escribir "Organizacion: ",organizacion2;
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			si contador2=3 Entonces
+				Escribir "## contacto n° ",contador2," ##";
+				Escribir "Nombre: ",nombre3;
+				Escribir "Telefono: ",telefono3;
+				Escribir "Organizacion: ",organizacion3;
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+		FinSi
+		//Eliminar contacto
+		si i=3 Entonces
+			Escribir "Que contacto decea Eliminar: ";
+			Escribir "Contacto 1: ";
+			Escribir "Contacto 2: ";
+			Escribir "Contacto 3: ";
+			leer contador3;
+			si contador3=1 Entonces
+				Escribir "¡ Contacto Eliminado !";
+				nombre1<-"Ninguno";
+				telefono1<-"Ninguno";
+				organizacion1<-"Ninguno";
+				contador<-0;
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			si contador3=2 Entonces
+				Escribir "¡ Contacto Eliminado !";
+				nombre1<-"Ninguno";
+				telefono1<-"Ninguno";
+				organizacion1<-"Ninguno";
+				contador<-2;
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+			si contador3=3 Entonces
+				Escribir "¡ Contacto Eliminado !";
+				nombre1<-"Ninguno";
+				telefono1<-"Ninguno";
+				organizacion1<-"Ninguno";
+				contador<-4;
+				leer enter;
+				Limpiar Pantalla;
+			FinSi
+		FinSi
+		
+		
+	FinMientras
+	
+FinProceso

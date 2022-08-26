@@ -1,0 +1,20 @@
+//1. Realizar la siguiente figura por medio del ciclo Para
+Algoritmo Eje
+	//definimos las dos variables necesarias
+	definir control,vineta2,vineta como entero;
+	vineta <- 1;
+	control <- 1;
+	//ahora hacemos un siclo para y dentro una condicional para que 
+	//	cada vez que aumente el el ciclo le agregue una viñeta y haga esa figura 
+//	escalada
+	para control <- 1 hasta 15 Hacer
+		para vineta2 <- 1 hasta vineta con paso 1 Hacer
+			escribir Sin Saltar " *";
+		FinPara
+		Escribir "";
+		control <- control + 1;
+		vineta <- vineta + 1;
+	FinPara
+	
+	
+FinAlgoritmo
