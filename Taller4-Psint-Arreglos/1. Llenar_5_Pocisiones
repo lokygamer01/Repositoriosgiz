@@ -1,0 +1,25 @@
+//Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, 
+//se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:
+Algoritmo Llenar_5_Pocisiones
+	//definimos las variables necesarias para el ejercici
+	Definir num,i,cont como entero;
+	//ahora pedimos el dato que necesitamos del uduario
+	i <- 0;
+	cont <- 1;
+	//ahora hacemos el array para llenarlo con numeros que de el usuario
+	Dimension num[6];
+	Mientras cont <= 5 hacer
+		Escribir "Ingre el campo ",cont," a llenar del array: ";
+		leer i;
+		num[cont] <- i;
+		cont <- cont + 1;
+	FinMientras
+	//limpiamos pantalla e imprimimos los numeros
+	Limpiar Pantalla;
+	Escribir "num[",num[1],"]";
+	Escribir "num[",num[2],"]";
+	Escribir "num[",num[3],"]";
+	Escribir "num[",num[4],"]";
+	Escribir "num[",num[5],"]";
+	
+FinAlgoritmo
