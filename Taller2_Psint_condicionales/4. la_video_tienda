@@ -1,0 +1,80 @@
+//La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que 
+//permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles 
+//y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.
+Proceso LA_VIDEO_TIENDA
+	//emprezamos creando las variables necesarias para la apk
+	definir nom_cliente Como Caracter;
+	Definir nit Como Entero;
+	definir pelicula Como Caracter;
+	definir precio Como Real;
+	definir tiempo Como entero;
+	Definir total como real;
+	definir obsevacion Como Caracter;
+	definir opcion como entero;
+	definir opcion2 como entero;
+	
+	//ahora pedimos los datos para el proceso de alquilar la pelicula
+	
+	Escribir "video peliculas el Porvenir";
+	Escribir "";
+	Escribir "Ingrese el nombre del cliente: ";
+	leer nom_cliente;
+	Escribir "Ingrese el documento de identidad: ";
+	leer nit;
+	escribir "Las peliculas disponibles son: ";
+	escribir "";
+	escribir "1. Titanic (romanse,drama) $ 5.99";
+	escribir "2. rapidos y furiosos 9 (acción,ficción) $ 10.30";
+	escribir "3. Midsommar (Terror) $ 6.15 ";
+	leer opcion;
+	segun opcion hacer
+		1:
+			pelicula <- "Titanic(romanse,drama)";
+			precio <- 5.99;
+		2:
+			pelicula <- "rapidos y furiosos 9(acción,ficción)";
+			precio <- 10.30;
+		3:
+			pelicula <- "Midsommar(Terror)";
+			precio <- 6.15;
+	FinSegun
+	
+	Escribir "";
+	escribir "cuanto tiempo quiere alquilar: ";
+	escribir "1. una semana";
+	escribir "2. un mes";
+	escribir "3. un año";
+	leer opcion2;
+	Escribir "";
+	
+	segun opcion2 hacer
+		1:
+			tiempo <- 7;
+		2:
+			tiempo <- 30;
+		3:
+			tiempo <- 365;
+	FinSegun
+	
+	total <- tiempo * precio; 
+	
+	Escribir "Ingrese obsevacion: ";
+	leer obsevacion;
+	
+	//por ultimo colocamos todo la facturilla y limpiamos pantalla
+	Limpiar Pantalla;
+	Escribir "@@@ Pelicula alquilada con extio";
+	escribir "";
+	Escribir "Nombre: ",nom_cliente;
+	Escribir "Nit: ",nit;
+	escribir "pelicula: ",pelicula;
+	escribir "precio: $",precio;
+	escribir "tiempo: ",tiempo," Dias";
+	Escribir "El total a pagar es: $",total;
+	escribir "";
+	escribir "obsevacion: ",obsevacion;
+	
+	
+	
+	
+FinProceso

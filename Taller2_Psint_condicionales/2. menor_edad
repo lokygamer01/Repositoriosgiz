@@ -1,0 +1,12 @@
+//Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).
+Proceso menor_edad
+	//definimos la variable edad
+	definir edad Como Entero;
+	//pedimos la edad del usuario y la pedimos
+	escribir "por favor ingrese su edad";
+	leer edad;
+	//hacemos la condicional para determinar si es menor
+	si edad < 18 Entonces
+		escribir "Usted es menor de edad";
+	FinSi
+FinProceso
