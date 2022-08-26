@@ -1,0 +1,23 @@
+Proceso nombre_padre_y_madre
+	//definimos las variables necesarias
+	definir nombre Como Caracter;
+	definir nom_madre Como Caracter;
+	definir nom_padre Como Caracter;
+	
+	//ahora predimos los nombres y apellidos
+	escribir 'Ingrese sus nombres y apellidos por favor: ';
+	leer nombre;
+	escribir 'Ingrese los nombres y apellidos de su madre por favor: ';
+	leer nom_madre;
+	escribir 'Ingrese los nombres y apellidos de su padre por favor: ';
+	leer nom_padre;
+	
+	//por ultimo hacemos la concatenacion para mostrar el mensaje FinAlgoritmo y limpiamos pantalla para que 
+	//se vea mejor
+	Limpiar Pantalla;
+	
+	escribir "Yo ",nombre," soy hijo de ",nom_madre," y ",nom_padre;
+	
+	
+	
+FinProceso
