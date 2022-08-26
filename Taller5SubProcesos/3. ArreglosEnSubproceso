@@ -1,0 +1,130 @@
+subproceso Unollenar(num1,num2)
+	Definir num,i,cont como entero;
+	i <- num1;
+	cont <- 1;
+	Dimension num[6];
+	Mientras cont <= 5 hacer
+		Escribir "Ingre el campo ",cont," a llenar del array: ";
+		leer i;
+		num[cont] <- i;
+		cont <- cont + 1;
+	FinMientras
+	//limpiamos pantalla e imprimimos los numeros
+	Limpiar Pantalla;
+	Escribir "num[",num[1],"]";
+	Escribir "num[",num[2],"]";
+	Escribir "num[",num[3],"]";
+	Escribir "num[",num[4],"]";
+	Escribir "num[",num[5],"]";
+finsubproceso
+// -----------------------------------------------------
+SubProceso DosAleatorios(num1,num2)
+definir num,i,cont Como Entero;
+Dimension num[20];
+cont <- 0;
+mientras cont <= 19 Hacer
+	num[cont] <- Aleatorio(1,100);
+	cont <- cont+1;
+FinMientras
+cont <-1;
+Escribir  "Numeros Pares";
+mientras cont <= 19 Hacer
+	i<- num[cont] % 2;
+	si i = 0 Entonces
+		Escribir Sin Saltar cont,". num [",num[cont],"] , ";
+		cont <- cont+1;
+	SiNo
+		cont <- cont+1;
+	FinSi
+FinMientras
+cont <-1;
+Escribir " ";
+Escribir "Numeros Impares";
+mientras cont <= 19 Hacer
+	i<- num[cont] % 2;
+	si i = 1 Entonces
+		Escribir Sin Saltar cont,". num [",num[cont],"] , ";
+		cont <- cont+1;
+	SiNo
+		cont <- cont+1;
+	FinSi
+FinMientras
+FinSubProceso
+//----------------------------------------------
+SubProceso TresNumerosPrimos(num1,num2)
+	Definir cont,div,num,cont2 Como Entero;
+	Dimension num[1000];
+	cont <- 1;
+	Para cont <- 1 hasta 999 con paso 1 hacer 
+		div <- 1;
+		cont2 <- 0;
+		mientras div <= cont hacer
+			si cont  mod div == 0 entonces
+				cont2 <- cont2 + 1;
+			FinSi
+			div<-div+1;
+		FinMientras
+		si cont2 == 2 entonces
+			num[cont] <- cont;
+			Escribir "El numero, «",num[cont], "» es primo";
+		FinSi
+	FinPara
+FinSubProceso
+//------------------------------------------------
+SubProceso CuatroImprimirUnaMatriz(num1,num2)
+	//definimos las variables necesarias
+	Definir l,c,x,z,cont,num Como Entero;
+	//Ahora hacemos el ciclo para que sea todo de forma automata        
+	Dimension num[4,5];
+	num[0,0]<-01;num[0,1]<-02;num[0,2]<-03;num[0,3]<-04;num[0,4]<-05;
+	num[1,0]<-06;num[1,1]<-07;num[1,2]<-08;num[1,3]<-09;num[1,4]<-10;
+	num[2,0]<-11;num[2,1]<-12;num[2,2]<-13;num[2,3]<-14;num[2,4]<-15;
+	num[3,0]<-16;num[3,1]<-17;num[3,2]<-18;num[3,3]<-19;num[3,4]<-20;
+	l <- 1;
+	
+	para l <- 1 Hasta 3 con paso 1 Hacer
+		cont <- 1;
+		c <- 1;
+		para cont <- 1 hasta 4 con paso 1 Hacer 
+			escribir Sin Saltar "[ ",num[l,c]," ]";
+			c <- c + 1;
+		FinPara
+		Escribir "";
+	FinPara
+FinSubProceso
+//----------------------------------------------------------------
+SubProceso Cincotablas_de_multiplicar (num1,num2)
+	definir a,b,num,columna,fila Como Entero;
+	
+	Dimension num[10,10];
+	a <- 1;
+	para a <- 1 Hasta 9 con paso 1 Hacer
+		b<- 1;
+		para b <- 1 hasta 9 con paso 1 hacer 
+			num[a,b]<-(a*b);
+			escribir Sin Saltar "(",num[a,b],")";
+		FinPara
+		Escribir "";
+	FinPara 
+	
+	Escribir "";
+	Escribir "";
+	
+	
+	escribir "el resultado es: (",num[num1,num2],")";
+FinSubProceso
+Proceso ArreglosEnFuncionesTres
+	definir num1,num2,stop Como Entero;
+	Escribir "ingrese dos numeros";
+	leer num1;
+	leer num2;
+	Unollenar(num1,num2);
+	Leer stop;
+	DosAleatorios(num1,num2);
+	Leer stop;
+	TresNumerosPrimos(num1,num2);
+	Leer stop;
+	CuatroImprimirUnaMatriz(num1,num2);
+	Leer stop;
+	Cincotablas_de_multiplicar(num1,num2);
+FinProceso
